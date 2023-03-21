@@ -1,0 +1,45 @@
+@use '@/styles/resources/variables' as *;
+
+.el-dropdown__popper {
+  &.el-popper {
+    &.s-header-popper {
+      border: unset;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgb(103 93 209 / 0.15);
+    }
+  }
+}
+
+.el-select__popper {
+  &.el-popper {
+    &.s-select-popper {
+      border: 1px solid $color--divider;
+      border-radius: 2px;
+      box-shadow: 0 0 4px rgb(103 93 209 / 0.15);
+
+      .el-select-dropdown{
+        &__list {
+          padding: 0;
+          margin: 0 !important;
+        }
+
+        &__item {
+          min-height: 40px;
+          display: flex;
+          align-items: center;
+          padding: 10px 14px;
+
+          &:first-of-type {
+            border-radius: 2px 2px 0 0;
+          }
+
+          &:last-of-type {
+            border-radius: 0 0 2px 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

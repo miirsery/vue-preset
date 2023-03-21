@@ -1,0 +1,11 @@
+# Folders
+node_modules/
+public/
+dist/
+
+# Files
+tsconfig.json
+
+# Extensions
+*.yaml
+*.conf

@@ -1,0 +1,197 @@
+@use '@/styles/resources/variables' as *;
+@use '@/styles/resources/mixins' as *;
+
+.el-button {
+  @include text-sm(true);
+
+  height: 48px;
+  min-width: 80px;
+  border: 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: $color--gray;
+  background: $color--white;
+  transition-duration: 0.3s;
+  padding: 15px 22px;
+
+  &.el-button--info {
+    border: 1px solid $color--gray;
+    background: transparent;
+
+    &:not(.is-disabled):hover,
+    &:focus:hover {
+      border: 1px solid $color--black;
+      color: $color--black;
+    }
+
+    &.is-disabled {
+      border: 1px solid $color--gray;
+      color: $color--gray;
+      opacity: 0.5;
+    }
+  }
+
+  &.is-text {
+    background: transparent;
+
+    &:not(.is-disabled):active {
+      background-color: transparent;
+    }
+
+    > span {
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    &:not(.is-disabled):hover,
+    &:focus:hover {
+      color: $color--black;
+      background-color: transparent;
+    }
+
+    &:focus {
+      color: $color--gray;
+      background-color: transparent;
+    }
+
+    &.is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &.el-button--primary {
+    box-shadow: 3px 3px 6px rgb(25 90 188 / 0.2);
+    text-shadow: 1px 1px 0 rgb(0 0 0 / 0.1);
+    color: $color--white;
+    background: $color--primary;
+
+    &:not(.is-disabled):hover,
+    &:focus:hover {
+      background: linear-gradient(0deg, rgb(51 51 51 / 0.2), rgb(51 51 51 / 0.2)), $color--primary;
+    }
+
+    &.is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &.el-button--danger {
+    box-shadow: 3px 3px 6px rgb(25 90 188 / 0.2);
+    text-shadow: 1px 1px 0 rgb(0 0 0 / 0.1);
+    color: $color--white;
+    background: #fe0a0a;
+
+    &:not(.is-disabled):hover,
+    &:focus:hover {
+      background: linear-gradient(0deg, rgb(51 51 51 / 0.2), rgb(51 51 51 / 0.2)), #fe0a0a;
+    }
+
+    &.is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &.el-button--small.is-round {
+    @include text-sm(true);
+
+    height: 48px;
+    border-radius: 40px;
+    box-shadow: 4px 4px 20px rgb(1 57 138 / 0.1);
+    padding: 15px 24px;
+
+    .app-icon {
+      margin-right: 8px;
+    }
+  }
+
+  &.is-round {
+    @include text-md(true);
+
+    height: 60px;
+    border-radius: 60px;
+    box-shadow: 4px 4px 20px rgb(103 93 209 / 0.2);
+    color: $color--black;
+    padding: 20px 42px;
+
+    .app-icon {
+      margin-right: 10px;
+    }
+
+    &:not(.is-disabled):hover,
+    &:focus:hover {
+      box-shadow: 3px 9px 20px rgb(103 93 209 / 0.2);
+    }
+
+    &.is-disabled {
+      box-shadow: 4px 4px 20px rgb(103 93 209 / 0.2);
+      opacity: 0.5;
+    }
+  }
+
+  &.is-plain {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgb(25 90 188 / 0.2);
+    box-sizing: border-box;
+    color: $color--white;
+    background: $color--primary;
+
+    &:not(.is-disabled):hover,
+    &:focus:hover {
+      box-shadow: 3px 3px 6px rgb(25 90 188 / 0.2);
+      background: linear-gradient(0deg, rgb(51 51 51 / 0.2), rgb(51 51 51 / 0.2)), $color--primary;
+    }
+
+    &:focus {
+      box-shadow: 3px 3px 6px rgb(25 90 188 / 0.2);
+      background: $color--primary;
+    }
+
+    &.is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &.is-link {
+    @include text-md;
+
+    height: inherit;
+    text-transform: none;
+    color: $color--primary;
+    background: transparent;
+    padding: 0;
+
+    > span {
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    &:hover,
+    &:focus:hover {
+      color: $color--black;
+    }
+
+    &:focus {
+      color: $color--primary;
+    }
+  }
+
+  &.el-button--small.is-link {
+    @include text-sm;
+
+    &:hover,
+    &:focus:hover {
+      color: $color--black;
+    }
+
+    &:focus {
+      color: $color--gray;
+    }
+  }
+
+  &.el-button--large.is-link {
+    @include text-lg;
+  }
+}

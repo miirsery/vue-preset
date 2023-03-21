@@ -1,0 +1,13 @@
+@import 'mixins';
+@import 'variables';
+
+$z-index: (
+  above: 1000,
+  modal: 200,
+  loader: 100,
+  menu: 40,
+  popover: 30,
+  dropdown: 20,
+  default: 1,
+  below: -1,
+);

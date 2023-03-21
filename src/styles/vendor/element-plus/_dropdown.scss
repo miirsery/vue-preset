@@ -1,0 +1,33 @@
+@use '@/styles/resources/mixins' as *;
+@use '@/styles/resources/variables' as *;
+
+.el-popper__arrow {
+  display: none;
+}
+
+.el-popper {
+  &.price-select {
+    width: 149px;
+
+    .el-dropdown-menu {
+      padding: 0;
+
+      &__item {
+        @include text-md;
+
+        height: 40px;
+        color: $color--black;
+        padding: 0 18px;
+
+        &:hover {
+          color: $color--black;
+          background: rgb(130 130 130 / 0.06);
+        }
+      }
+    }
+
+    @include responsive(xs) {
+      display: none;
+    }
+  }
+}

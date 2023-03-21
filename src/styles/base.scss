@@ -1,0 +1,128 @@
+@use 'resources/variables' as *;
+@use 'resources/mixins' as *;
+
+html, #app, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $font--main;
+  color: $color--black;
+}
+
+.h1, h1 {
+  @include text-h1;
+}
+
+.h2, h2 {
+  @include text-h2;
+}
+
+.h3, h3 {
+  @include text-h3;
+}
+
+.h4, h4 {
+  @include text-h4;
+}
+
+.text {
+  &-lg {
+    @include text-lg;
+  }
+
+  &-md {
+    @include text-md;
+  }
+
+  &-sm {
+    @include text-sm;
+  }
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.c-p {
+  cursor: pointer !important;
+}
+
+.p-r {
+  position: relative !important;
+}
+
+.badge {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: $color--danger;
+}
+
+.link {
+  text-decoration: none;
+  color: $color--primary;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $color--divider;
+}
+
+// Colors
+@each $_class-name,
+$_color
+in (
+    ('primary', $color--primary),
+    ('success', $color--success),
+    ('danger', $color--danger),
+    ('warning', $color--warning),
+    ('white', $color--white),
+    ('disabled', $color--disabled),
+    ('background', $color--background),
+    ('background-gradient', $color--background-gradient),
+    ('divider', $color--divider),
+    ('black', $color--black),
+    ('black-secondary', $color--black-secondary),
+    ('gray', $color--gray),
+    ('gray-secondary', $color--gray-secondary),
+    ('pink', $color--pink),
+    ('blue', $color--blue),
+    ('violet', $color--violet),
+) {
+  // @sample
+  // .bg-primary
+  // .color-primary
+  @include color($_class-name, $_color);
+}
+
+// Margins | Paddings
+@include sizes-classes;
+
+// Icons classes
+@include icon-classes;
+
+// Global classes
+@include project-classes;
+
+@include responsive(xs) {
+  @include sizes-classes('-xs');
+  @include project-classes('-xs');
+}
+
+@include responsive(sm) {
+  @include sizes-classes('-sm');
+  @include project-classes('-sm');
+}
+
+@include responsive(md) {
+  @include sizes-classes('-md');
+  @include project-classes('-md');
+}
+
+@include responsive(lg) {
+  @include sizes-classes('-lg');
+  @include project-classes('-lg');
+}

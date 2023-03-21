@@ -1,0 +1,21 @@
+.s-dialog {
+  &.el-dialog {
+    border-radius: 10px;
+
+    .el-dialog {
+      &__header {
+        display: none;
+      }
+
+      &__body {
+        font-size: inherit;
+        color: inherit;
+        padding: 0;
+      }
+    }
+  }
+
+  &.resize-dialog {
+    max-width: 355px;
+  }
+}

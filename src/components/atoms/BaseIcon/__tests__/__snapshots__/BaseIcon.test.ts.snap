@@ -1,0 +1,16 @@
+// Vitest Snapshot v1
+
+exports[`Testing BaseIcon.vue > Should have snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="base-icon base-icon--close"
+  data-v-8c85aa7d=""
+  height="24px"
+  width="23px"
+>
+  <use
+    data-v-8c85aa7d=""
+    href="#icon-close"
+  />
+</svg>
+`;

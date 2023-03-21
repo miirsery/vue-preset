@@ -1,0 +1,88 @@
+@use '@/styles/resources/variables' as *;
+
+.el-radio {
+  &__inner {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color--divider;
+    transition-duration: 0.2s;
+
+    &:hover {
+      border-color: $color--primary !important;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 18px;
+    color: $color--gray !important;
+    transition-duration: 0.2s;
+    padding-left: 10px;
+
+    &:hover {
+      color: $color--black;
+    }
+  }
+
+  &.is-disabled.is-checked {
+    .el-radio {
+      &__inner {
+        border: none;
+        background: $color--primary;
+
+        &::after {
+          background: #8cacdd;
+        }
+      }
+
+      &__label {
+        color: $color--gray;
+      }
+    }
+  }
+
+  &.is-checked {
+    .el-radio {
+      &__input {
+        .el-radio {
+          &__inner {
+            border: none;
+            background: $color--primary;
+
+            &::after {
+              width: 6px;
+              height: 6px;
+            }
+          }
+        }
+
+        &.is-checked + .el-radio__label {
+          color: $color--black;
+        }
+      }
+    }
+  }
+
+  &.is-disabled {
+    .el-radio {
+      &__inner {
+        border: none;
+        background: $color--divider;
+      }
+
+      &__input {
+        .el-radio {
+          &__inner {
+            background: $color--divider;
+          }
+        }
+      }
+
+      &__label {
+        &:hover {
+          color: $color--gray;
+        }
+      }
+    }
+  }
+}

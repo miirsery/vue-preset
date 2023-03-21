@@ -1,0 +1,8 @@
+.gitignore
+
+node_modules/
+public/
+dist/
+.md
+auto-imports.d.ts
+components.d.ts

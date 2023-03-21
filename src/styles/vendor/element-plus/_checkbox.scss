@@ -1,0 +1,62 @@
+@use '@/styles/resources/variables' as *;
+
+.el-checkbox {
+  &__label {
+    padding-left: 10px;
+  }
+
+  &__inner {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 2px;
+
+    &::after {
+      top: 3px !important;
+      left: 6px !important;
+    }
+
+    &:hover {
+      border: 1px solid $color--divider;
+    }
+  }
+
+
+  &:hover {
+    .el-checkbox__label {
+      color: $color--black;
+    }
+  }
+
+  &.is-checked {
+    .el-checkbox {
+      &__inner {
+        border: none;
+        background-color: $color--primary !important;
+      }
+
+      &__label {
+        color: $color--black;
+      }
+    }
+  }
+
+  &.is-checked.is-disabled {
+    .el-checkbox {
+      &__inner {
+        border: none;
+        background-color: $color--primary;
+      }
+
+      &__label {
+        color: $color--gray;
+      }
+    }
+  }
+
+  &.is-disabled {
+    .el-checkbox__inner {
+      border: 1px solid $color--divider;
+      background-color: $color--divider;
+    }
+  }
+}

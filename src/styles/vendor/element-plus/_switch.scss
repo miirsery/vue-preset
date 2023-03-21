@@ -1,0 +1,34 @@
+@use '@/styles/resources/variables' as *;
+
+.el-switch {
+  .el-switch {
+    &__core {
+      height: 16px;
+      min-width: 30px;
+      border: none;
+      background: $color--divider;
+
+      .el-switch {
+        &__action {
+          left: -1px;
+          width: 18px;
+          height: 18px;
+          box-shadow: 3px 3px 6px rgb(103 93 209 / 0.1);
+          background: $color--white;
+        }
+      }
+    }
+
+    &.is-disabled {
+      opacity: 1;
+    }
+  }
+
+  &.is-checked {
+    .el-switch {
+      &__core {
+        background-color: $color--primary !important;
+      }
+    }
+  }
+}

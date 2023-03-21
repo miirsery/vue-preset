@@ -1,0 +1,17 @@
+@use 'resources/variables/fonts' as *;
+
+@font-face {
+  src: url('@/styles/fonts/SourceSansPro-Regular.ttf') format('truetype');
+  font-family: $font--main;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('@/styles/fonts/SourceSansPro-Bold.ttf') format('truetype');
+  font-family: $font--main;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

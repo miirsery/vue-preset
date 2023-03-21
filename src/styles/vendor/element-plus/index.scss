@@ -1,0 +1,24 @@
+@use '@/styles/resources/variables' as *;
+
+@use 'element-plus/theme-chalk/src/common/var' with (
+  $sm: $breakpoint--sm - 1,
+  $md: $breakpoint--md,
+  $lg: $breakpoint--lg,
+);
+
+/* ElCol */
+@use 'element-plus/theme-chalk/src/col';
+
+/* ElRow */
+@use 'element-plus/theme-chalk/src/row';
+
+@import 'switch';
+@import 'checkbox';
+@import 'radio';
+@import 'dropdown';
+@import 'dialog';
+@import 'button';
+@import 'popper';
+@import 'tabs';
+@import 'overlay';
+@import 'table';

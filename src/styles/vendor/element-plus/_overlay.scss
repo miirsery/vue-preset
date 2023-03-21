@@ -1,0 +1,43 @@
+.el-overlay {
+  background: rgba(#000, 0.75) !important;
+  backdrop-filter: blur(2px);
+}
+
+.el-overlay-dialog {
+  &.is-bottom {
+    top: unset;
+    bottom: 20px;
+    overflow-y: hidden;
+
+    &.is-center {
+      margin: 0;
+    }
+  }
+
+  &.is-full {
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+
+    .el-dialog {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      margin: 0;
+      overflow-y: auto;
+
+      &__body {
+        height: 100%;
+      }
+    }
+
+    &.is-center {
+      margin: 0;
+    }
+  }
+
+  &.is-center {
+    margin: 15px 0;
+  }
+}
